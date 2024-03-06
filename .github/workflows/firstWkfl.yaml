@@ -6,14 +6,14 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
             - name: Echo a String
-              run: echo "Hello World!!!"
+              run: echo "Hello Lambda World!"
             - name: Multiline Command
               run: |
                         node -v
                         npm -v
 
     deploy_lambda:
-        name: Deploy Hello World Lambda
+        name: Deploy Diagno Lambda
         runs-on: ubuntu-latest
 
         steps:
