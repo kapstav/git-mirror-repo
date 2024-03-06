@@ -11,3 +11,27 @@ jobs:
               run: |
                         node -v
                         npm -v
+
+    deploy_lambda:
+        name: Deploy Hello World Lambda
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+
+        - name: Configure AWS Credentials
+          uses: aws-actions/configure-aws-credentials@v2
+          with:
+           aws-access-key-id: AKIAZICKAMD7YDM36EJC
+           aws-secret-access-key: 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
+           aws-region: US-east-1
+
+        - name: Deploy Lambda Function
+          run: |
+           aws lambda create-function \
+            --function-name DiagnoLambda \
+            --runtime python3.8 \
+            --handler lambda_function.lambda_handler \
+            --role arn:aws:iam::635810373887:role/service-role/DiagnoLambda-role-l1f4q34p \
+            --zip-file fileb://DiagnoLambda-de517250-33d2-4e02-8acc-68bd2ac01e93.zip
