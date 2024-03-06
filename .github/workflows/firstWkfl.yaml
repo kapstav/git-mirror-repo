@@ -25,7 +25,7 @@ jobs:
           with:
            aws-access-key-id: AKIAZICKAMD7YDM36EJC
            aws-secret-access-key: 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
-           aws-region: US-east-1
+           aws-region: us-east-1
 
         - name: Deploy Lambda Function
           run: |
