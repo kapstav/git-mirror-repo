@@ -23,8 +23,8 @@ jobs:
         - name: Configure AWS Credentials
           uses: aws-actions/configure-aws-credentials@v2
           with:
-           aws-access-key-id: AKIAZICKAMD7YDM36EJC
-           aws-secret-access-key: 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
+           aws-access-key-id: AKIAZICKAMD765PAQITE
+           aws-secret-access-key: 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
            aws-region: us-east-1
 
         - name: Deploy Lambda Function
