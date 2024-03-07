@@ -7,10 +7,14 @@ jobs:
         steps: 
             - name: Echo a String
               run: echo "Hello Lambda World!"
-            - name: Multiline Command
-              run: |
-                        node -v
-                        npm -v
+
+            - name: Use Node.js 14.x
+              uses: actions/setup-node@v2
+              with:
+                node-version: '14.x'
+
+            - name: Install pnpm
+              run: npm install -g pnpm
 
     deploy_lambda:
         name: Deploy Diagno Lambda
