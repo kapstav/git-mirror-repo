@@ -6,7 +6,18 @@ jobs:
         steps:
             - name: BBB
               id:   BBB
-              run: echo 'BBB'
+              run: |
+                echo ${{github.ref}}
+                echo ${{github.action}}
+                echo ${{github.action_path}}
+                echo ${{github.actor}}
+                echo ${{github.event}}
+                echo ${{github.event_name}}
+                echo ${{github.path}}
+                echo ${{github.ref_name}}
+                echo ${{github.repository}}
+                echo ${{github.repository_owner}}
+                echo ${{github.server_url}}
             - name: AAA
               id:   AAA
               run: echo 'AAA'
