@@ -1,0 +1,17 @@
+name: Second Workflow
+on: push
+jobs:
+    echoqa:
+        runs-on: ubuntu-latest
+        steps:
+            - name: BBB
+              id:   BBB
+              run: echo 'BBB'
+            - name: AAA
+              id:   AAA
+              run: echo 'AAA'
+
+
+
+ 
+

@@ -31,11 +31,11 @@ jobs:
            aws-secret-access-key: mE4wMr6aeFLo6mt/enF43S3rJlUL8utdX3BRV8it
            aws-region: us-east-1
 
-        - name: Deploy Lambda Function
-          run: |
-           aws lambda create-function \
-            --function-name DiagnoLambda \
-            --runtime python3.8 \
-            --handler lambda_function.lambda_handler \
-            --role arn:aws:iam::635810373887:role/service-role/DiagnoLambda-role-l1f4q34p \
-            --zip-file fileb://DiagnoLambda-de517250-33d2-4e02-8acc-68bd2ac01e93.zip
+        # - name: Deploy Lambda Function
+        #   run: |
+        #    aws lambda create-function \
+        #     --function-name DiagnoLambda \
+        #     --runtime python3.8 \
+        #     --handler lambda_function.lambda_handler \
+        #     --role arn:aws:iam::635810373887:role/service-role/DiagnoLambda-role-l1f4q34p \
+        #     --zip-file fileb://DiagnoLambda-de517250-33d2-4e02-8acc-68bd2a
