@@ -6,7 +6,7 @@ jobs:
         steps:
             - name: BBB
               id:   BBB
-              run: echo 'BBB'
+              run: echo ${{github.sha}}
             - name: AAA
               id:   AAA
               run: echo 'AAA'
