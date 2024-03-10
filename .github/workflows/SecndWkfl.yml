@@ -21,7 +21,7 @@ jobs:
             - name: AAA
               id:   AAA
               run: |
-                echo ${{vars.MYVAR}}
+                echo ${{vars.MY_VAR}}
                
 
 
