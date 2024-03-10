@@ -1,5 +1,7 @@
 name: Second Workflow
 on: push
+env:
+    MY_VAR: Goldy
 jobs:
     echoqa:
         runs-on: ubuntu-latest
@@ -22,6 +24,7 @@ jobs:
               id:   AAA
               run: |
                 echo ${{vars.MY_VAR}}
+                echo ${{env.MY_VAR}}
                
 
 
